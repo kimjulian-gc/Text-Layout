@@ -94,4 +94,15 @@ public class TBUtils {
     return returnStr;
   }
 
+  static String reverseStr(String str) {
+    String returnStr = "";
+    char[] strArr = str.toCharArray();
+
+    for (int i = strArr.length - 1; i >= 0; i--) {
+      returnStr += strArr[i];
+    }
+
+    return returnStr;
+  }
+
 } // class TBUtils

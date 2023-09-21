@@ -46,6 +46,9 @@ public class TBExpt {
     );
     TBUtils.print(pen, rightTest);
 
+    TextBlock hFlipped = new HorizontallyFlipped(rightTest);
+    TBUtils.print(pen, hFlipped);
+
     // Clean up after ourselves.
     pen.close();
   } // main(String[])
