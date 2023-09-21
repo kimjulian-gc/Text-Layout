@@ -1,6 +1,7 @@
 package lab.polymorphism;
 
 import java.io.PrintWriter;
+import javax.swing.Box;
 
 /**
  * A series of experiments with the text block layout classes.
@@ -51,6 +52,19 @@ public class TBExpt {
 
     TextBlock vFlipped = new VerticallyFlipped(rightTest);
     TBUtils.print(pen, vFlipped);
+
+    TextBlock scrambledTest1 = new ScrambledRows(rightTest);
+    TBUtils.print(pen, scrambledTest1);
+    TBUtils.print(pen, scrambledTest1);
+
+    TextBlock scrambledTest2 = new VComposition(
+      new Centered(
+        new ScrambledRows(new BoxedBlock(new TextLine("Hello"))),
+        21
+      ),
+      numberBlock
+    );
+    TBUtils.print(pen, scrambledTest2);
 
     // Clean up after ourselves.
     pen.close();

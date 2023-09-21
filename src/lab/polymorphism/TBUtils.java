@@ -1,6 +1,8 @@
 package lab.polymorphism;
 
 import java.io.PrintWriter;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Utilities for TextBlocks.
@@ -100,6 +102,22 @@ public class TBUtils {
 
     for (int i = strArr.length - 1; i >= 0; i--) {
       returnStr += strArr[i];
+    }
+
+    return returnStr;
+  }
+
+  static String scrambleStr(String str) {
+    String returnStr = "";
+    // following code adapted from https://stackoverflow.com/a/34055302
+    List<Character> strList = str.chars()
+      .mapToObj(c -> Character.valueOf((char) c))
+      .collect(Collectors.toList());
+    // end citation
+
+    while(strList.size() > 0) {
+      int randomI = (int) (Math.random() * strList.size());
+      returnStr += strList.remove(randomI);
     }
 
     return returnStr;
