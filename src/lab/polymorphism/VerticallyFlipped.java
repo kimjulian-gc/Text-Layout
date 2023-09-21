@@ -33,4 +33,12 @@ public class VerticallyFlipped implements TextBlock {
   public int width() {
     return this.block.width();
   }
+
+  public boolean eqv(TextBlock other) {
+    if (!this.getClass().equals(other.getClass())) {
+      return false;
+    }
+
+    return this.block.eqv(this.getClass().cast(other).block);
+  }
 }

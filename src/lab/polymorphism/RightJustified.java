@@ -36,4 +36,15 @@ public class RightJustified implements TextBlock {
   public int width() {
     return this.width;
   }
+
+  public boolean eqv(TextBlock other) {
+    if (!this.getClass().equals(other.getClass())) {
+      return false;
+    }
+
+    RightJustified otherCasted = this.getClass().cast(other);
+
+    return this.block.eqv(otherCasted.block) && this.width == otherCasted.width;
+  }
+
 }

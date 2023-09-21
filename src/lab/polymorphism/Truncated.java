@@ -34,4 +34,15 @@ public class Truncated implements TextBlock {
   public int width() {
     return (block.width() > this.maxWidth) ? this.maxWidth : block.width();
   }
+
+  public boolean eqv(TextBlock other) {
+    if (!this.getClass().equals(other.getClass())) {
+      return false;
+    }
+
+    Truncated otherCasted = this.getClass().cast(other);
+
+    // should be safe to cast since we checked before
+    return this.block.eqv(otherCasted.block) && this.maxWidth == otherCasted.maxWidth;
+  }
 }

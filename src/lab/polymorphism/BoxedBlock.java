@@ -67,4 +67,13 @@ public class BoxedBlock implements TextBlock {
     return 2 + this.contents.width();
   } // width()
 
+  public boolean eqv(TextBlock other) {
+    if (!this.getClass().equals(other.getClass())) {
+      return false;
+    }
+
+    // should be safe to cast since we checked before
+    return this.contents.eqv(this.getClass().cast(other).contents);
+  }
+
 } // class BoxedBlock

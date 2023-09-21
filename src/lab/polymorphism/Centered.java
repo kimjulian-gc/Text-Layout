@@ -38,4 +38,15 @@ public class Centered implements TextBlock {
   public int width() {
     return this.width;
   }
+
+  public boolean eqv(TextBlock other) {
+    if (!this.getClass().equals(other.getClass())) {
+      return false;
+    }
+
+    Centered otherCasted = this.getClass().cast(other);
+
+    // should be safe to cast since we checked before
+    return this.block.eqv(otherCasted.block) && this.width == otherCasted.width;
+  }
 }

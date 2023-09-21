@@ -86,4 +86,15 @@ public class HComposition implements TextBlock {
     return this.left.width() + this.right.width();
   } // width()
 
+  public boolean eqv(TextBlock other) {
+    if (!this.getClass().equals(other.getClass())) {
+      return false;
+    }
+
+    HComposition otherCasted = this.getClass().cast(other);
+
+    // should be safe to cast since we checked before
+    return this.left.eqv(otherCasted.left) && this.right.eqv(otherCasted.right);
+  }
+
 } // class HComposition
