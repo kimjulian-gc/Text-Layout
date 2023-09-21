@@ -18,11 +18,7 @@ public class Truncated implements TextBlock {
   public String row(int i) throws Exception {
     String blockRow = block.row(i);
 
-    if (blockRow.length() > this.maxWidth) {
-      blockRow = blockRow.substring(0, this.maxWidth);
-    }
-
-    return blockRow;
+    return TBUtils.truncateStr(blockRow, this.maxWidth);
   }
 
   /**

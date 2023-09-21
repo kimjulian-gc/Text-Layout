@@ -69,4 +69,29 @@ public class TBUtils {
     return lotsOfSpaces.substring(0, len);
   } // spaces(int)
 
+  static String truncateStr(String str, int width) {
+    String returnStr = str;
+
+    if (str.length() > width) {
+      returnStr = str.substring(0, width);
+    }
+
+    return returnStr;
+  }
+
+  static String padStr(String str, int leftPadding, int rightPadding) {
+    String returnStr = str;
+
+    for (int p = 0; p < leftPadding || p < rightPadding; p++) {
+      if (p < leftPadding) {
+        returnStr = " " + returnStr;
+      }
+      if (p < rightPadding) {
+        returnStr = returnStr + " ";
+      }
+    }
+
+    return returnStr;
+  }
+
 } // class TBUtils

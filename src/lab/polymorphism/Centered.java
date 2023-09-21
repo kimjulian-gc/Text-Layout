@@ -16,27 +16,13 @@ public class Centered implements TextBlock {
    * @exception Exception if the row number is invalid.
    */
   public String row(int i) throws Exception {
-    String blockRow = block.row(i);
-
-    if (blockRow.length() > this.width) {
-      blockRow = blockRow.substring(0, this.width);
-      return blockRow;
-    }
+    String blockRow = TBUtils.truncateStr(block.row(i), this.width);
 
     int totalPadding = this.width - blockRow.length();
     int rightPadding = totalPadding / 2;
     int leftPadding = totalPadding - rightPadding;
 
-    for (int p = 0; p < leftPadding || p < rightPadding; p++) {
-      if (p < leftPadding) {
-        blockRow = " " + blockRow;
-      }
-      if (p < rightPadding) {
-        blockRow = blockRow + " ";
-      }
-    }
-
-    return blockRow;
+    return TBUtils.padStr(blockRow, leftPadding, rightPadding);
   }
 
   /**
