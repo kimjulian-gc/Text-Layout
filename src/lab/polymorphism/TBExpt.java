@@ -18,10 +18,14 @@ public class TBExpt {
     PrintWriter pen = new PrintWriter(System.out, true);
 
     // Create a block to use
-    TextBlock block = new TextLine("Hello");
+    TextBlock block = new BoxedBlock(new VComposition(
+      new TextLine("Hello World!"), 
+      new TextLine("1234567890")
+    ));
 
     // Print out the block
     TBUtils.print(pen, block);
+    TBUtils.print(pen, new Truncated(block, 5));
 
     // Clean up after ourselves.
     pen.close();
