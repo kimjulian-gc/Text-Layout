@@ -40,6 +40,12 @@ public class TBExpt {
     );
     TBUtils.print(pen, centerTest2);
 
+    TextBlock rightTest = new VComposition(
+      new RightJustified(new BoxedBlock(new TextLine("Hello")), numberBlock.width()),
+      numberBlock
+    );
+    TBUtils.print(pen, rightTest);
+
     // Clean up after ourselves.
     pen.close();
   } // main(String[])
