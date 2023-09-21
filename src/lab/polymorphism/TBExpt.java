@@ -65,6 +65,22 @@ public class TBExpt {
     );
     TBUtils.print(pen, scrambledTest2);
 
+    TextBlock equalTest1 = new VComposition(
+      new Centered(new BoxedBlock(new TextLine("Hello")), 21),
+      numberBlock
+    );
+    TextBlock equalTest2 = new VComposition(
+      new Centered(new BoxedBlock(new TextLine("Hello")), 21),
+      numberBlock
+    );
+    pen.println(TBUtils.equal(equalTest1, equalTest2));
+
+    TextBlock equalTest3 = new VComposition(
+      new Centered(new BoxedBlock(new TextLine("Hello")), 19),
+      numberBlock
+    );
+    pen.println(TBUtils.equal(equalTest1, equalTest3));
+
     // Clean up after ourselves.
     pen.close();
   } // main(String[])

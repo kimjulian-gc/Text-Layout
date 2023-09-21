@@ -123,4 +123,17 @@ public class TBUtils {
     return returnStr;
   }
 
+  public static boolean equal(TextBlock t1, TextBlock t2) throws Exception {
+    if (t1.height() != t2.height() || t1.width() != t2.width()) {
+      return false;
+    }
+
+    boolean isEqual = true;
+    for (int i = 0; i < t1.height() && isEqual; i++) {
+      isEqual = t1.row(i).equals(t2.row(i));
+    }
+
+    return isEqual;
+  }
+
 } // class TBUtils
