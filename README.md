@@ -1,6 +1,9 @@
-lab-polymorphism-2019
-=====================
+# Mini-Project 3 : Text Layout
+## Name(s)
+Julian Kim
 
-A lab on polymorphism, based on an old lab from _The Tao of Java_, itself
-based on an even older lab from _Espresso_.  Old labs never die; they just
-get recycled.
+## Description
+This project includes my work for - [MP03: Text Layout](https://rebelsky.cs.grinnell.edu/Courses/CSC207/2023Fa/mps/mp03.html).
+
+## Resources used
+- Adapted https://stackoverflow.com/a/34055302 for `TBUtils::scrambleStr`
