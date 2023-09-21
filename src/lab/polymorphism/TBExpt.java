@@ -1,7 +1,6 @@
 package lab.polymorphism;
 
 import java.io.PrintWriter;
-import javax.swing.Box;
 
 /**
  * A series of experiments with the text block layout classes.
