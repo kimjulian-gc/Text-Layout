@@ -27,6 +27,19 @@ public class TBExpt {
     TBUtils.print(pen, block);
     TBUtils.print(pen, new Truncated(block, 5));
 
+    TextBlock numberBlock = new TextLine("012345678901234567890123456789");
+    TextBlock centerTest1 = new VComposition(
+      new Centered(new BoxedBlock(new TextLine("Hello")), 21),
+      numberBlock
+    );
+    TBUtils.print(pen, centerTest1);
+
+    TextBlock centerTest2 = new VComposition(
+      new BoxedBlock(new Centered(new TextLine("Hello"), 21)),
+      numberBlock
+    );
+    TBUtils.print(pen, centerTest2);
+
     // Clean up after ourselves.
     pen.close();
   } // main(String[])
