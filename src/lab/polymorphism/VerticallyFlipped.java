@@ -14,7 +14,6 @@ public class VerticallyFlipped implements TextBlock {
    * @exception Exception if the row number is invalid.
    */
   public String row(int i) throws Exception {
-    int numRows = this.height();
     // rows are zero-indexed i think
     String blockRow = block.row(this.height() - 1 - i);
 
