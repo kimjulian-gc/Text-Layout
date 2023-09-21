@@ -84,6 +84,10 @@ public class TBExpt {
     pen.println(TBUtils.eqv(equalTest1, equalTest2));
     pen.println(TBUtils.eqv(equalTest1, equalTest3));
 
+    TextBlock equalTest4 = equalTest1;
+    pen.println(TBUtils.eq(equalTest1, equalTest4));
+    pen.println(TBUtils.eq(equalTest1, equalTest2));
+
     // Clean up after ourselves.
     pen.close();
   } // main(String[])

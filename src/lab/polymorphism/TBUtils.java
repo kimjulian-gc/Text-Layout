@@ -140,4 +140,8 @@ public class TBUtils {
     return t1.eqv(t2);
   }
 
+  public static boolean eq(TextBlock t1, TextBlock t2) {
+    return t1 == t2;
+  }
+
 } // class TBUtils
