@@ -71,7 +71,7 @@ public class TBUtils {
     return lotsOfSpaces.substring(0, len);
   } // spaces(int)
 
-  static String truncateStr(String str, int width) {
+  public static String truncateStr(String str, int width) {
     String returnStr = str;
 
     if (str.length() > width) {
@@ -81,7 +81,7 @@ public class TBUtils {
     return returnStr;
   }
 
-  static String padStr(String str, int leftPadding, int rightPadding) {
+  public static String padStr(String str, int leftPadding, int rightPadding) {
     String returnStr = str;
 
     for (int p = 0; p < leftPadding || p < rightPadding; p++) {
@@ -96,7 +96,7 @@ public class TBUtils {
     return returnStr;
   }
 
-  static String reverseStr(String str) {
+  public static String reverseStr(String str) {
     String returnStr = "";
     char[] strArr = str.toCharArray();
 
@@ -107,9 +107,10 @@ public class TBUtils {
     return returnStr;
   }
 
-  static String scrambleStr(String str) {
+  public static String scrambleStr(String str) {
     String returnStr = "";
     // following code adapted from https://stackoverflow.com/a/34055302
+    // woohoo functional programming
     List<Character> strList = str.chars()
       .mapToObj(c -> Character.valueOf((char) c))
       .collect(Collectors.toList());

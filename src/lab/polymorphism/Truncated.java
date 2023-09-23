@@ -32,7 +32,7 @@ public class Truncated implements TextBlock {
    * Determine how many columns are in the block.
    */
   public int width() {
-    return (block.width() > this.maxWidth) ? this.maxWidth : block.width();
+    return Math.min(this.maxWidth, this.block.width());
   }
 
   public boolean eqv(TextBlock other) {
