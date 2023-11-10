@@ -12,7 +12,7 @@ public class VerticallyFlipped implements TextBlock {
     this.block = block;
   }
 
-    /**
+  /**
    * Get one row from the block.
    * 
    * @pre i < this.height()

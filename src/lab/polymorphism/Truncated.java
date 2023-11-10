@@ -14,7 +14,7 @@ public class Truncated implements TextBlock {
     this.maxWidth = maxWidth;
   }
 
-    /**
+  /**
    * Get one row from the block.
    * 
    * @pre i < this.height()

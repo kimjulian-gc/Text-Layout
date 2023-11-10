@@ -112,12 +112,11 @@ public class TBUtils {
     String returnStr = "";
     // following code adapted from https://stackoverflow.com/a/34055302
     // woohoo functional programming
-    List<Character> strList = str.chars()
-      .mapToObj(c -> Character.valueOf((char) c))
-      .collect(Collectors.toList());
+    List<Character> strList =
+        str.chars().mapToObj(c -> Character.valueOf((char) c)).collect(Collectors.toList());
     // end citation
 
-    while(strList.size() > 0) {
+    while (strList.size() > 0) {
       int randomI = (int) (Math.random() * strList.size());
       returnStr += strList.remove(randomI);
     }

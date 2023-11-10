@@ -14,7 +14,7 @@ public class Centered implements TextBlock {
     this.width = width;
   }
 
-    /**
+  /**
    * Get one row from the block.
    * 
    * @pre i < this.height()

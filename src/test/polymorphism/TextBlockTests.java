@@ -17,10 +17,8 @@ import lab.polymorphism.VComposition;
 
 public class TextBlockTests {
   TextBlock numberBlock = new TextLine("012345678901234567890123456789");
-  TextBlock centerTest1 = new VComposition(
-    new Centered(new BoxedBlock(new TextLine("Hello")), 21),
-    numberBlock
-  );
+  TextBlock centerTest1 =
+      new VComposition(new Centered(new BoxedBlock(new TextLine("Hello")), 21), numberBlock);
 
   @Test
   public void centeredRowTest() throws Exception {
@@ -56,9 +54,7 @@ public class TextBlockTests {
   }
 
   TextBlock rightTest = new VComposition(
-      new RightJustified(new BoxedBlock(new TextLine("Hello")), numberBlock.width()),
-      numberBlock
-    );
+      new RightJustified(new BoxedBlock(new TextLine("Hello")), numberBlock.width()), numberBlock);
 
   @Test
   public void rightRowTest() throws Exception {
@@ -75,18 +71,12 @@ public class TextBlockTests {
     assertEquals(30, rightTest.width());
   }
 
-  TextBlock equalTest1 = new VComposition(
-    new Centered(new BoxedBlock(new TextLine("Hello")), 21),
-    numberBlock
-  );
-  TextBlock equalTest2 = new VComposition(
-    new Centered(new BoxedBlock(new TextLine("Hello")), 21),
-    numberBlock
-  );
-  TextBlock equalTest3 = new VComposition(
-    new Centered(new BoxedBlock(new TextLine("Hello")), 19),
-    numberBlock
-  );
+  TextBlock equalTest1 =
+      new VComposition(new Centered(new BoxedBlock(new TextLine("Hello")), 21), numberBlock);
+  TextBlock equalTest2 =
+      new VComposition(new Centered(new BoxedBlock(new TextLine("Hello")), 21), numberBlock);
+  TextBlock equalTest3 =
+      new VComposition(new Centered(new BoxedBlock(new TextLine("Hello")), 19), numberBlock);
   TextBlock equalTest4 = equalTest1;
 
   @Test
@@ -116,13 +106,8 @@ public class TextBlockTests {
     char[] scrambledArr = TBUtils.scrambleStr("abcdef").toCharArray();
     Arrays.sort(scrambledArr);
 
-    assertTrue(
-      "Scrambled string has same characters as original",
-      Arrays.equals(
-        abcdefArr, 
-        scrambledArr
-      )
-    );
+    assertTrue("Scrambled string has same characters as original",
+        Arrays.equals(abcdefArr, scrambledArr));
   }
 
   @Test
@@ -134,7 +119,8 @@ public class TextBlockTests {
   @Test
   public void testEqv() {
     assertTrue("Constructed in same exact way is eqv", TBUtils.eqv(equalTest1, equalTest2));
-    assertFalse("Not constructed in same exact way is not eqv", TBUtils.eqv(equalTest1, equalTest3));
+    assertFalse("Not constructed in same exact way is not eqv",
+        TBUtils.eqv(equalTest1, equalTest3));
   }
 
   @Test
@@ -143,15 +129,12 @@ public class TextBlockTests {
     assertFalse("Not same place in memory is not eq", TBUtils.eq(equalTest1, equalTest2));
   }
 
-  TextBlock tooLongTest = new Truncated(new BoxedBlock(new VComposition(
-      new TextLine("Hello World!"), 
-      new TextLine("1234567890")
-    )), 5);
+  TextBlock tooLongTest = new Truncated(
+      new BoxedBlock(new VComposition(new TextLine("Hello World!"), new TextLine("1234567890"))),
+      5);
 
-  TextBlock tooShortTest = new Truncated(new BoxedBlock(new VComposition(
-    new TextLine("abcd e"),
-    new TextLine("au29 9q 9"))),
-  15);
+  TextBlock tooShortTest = new Truncated(
+      new BoxedBlock(new VComposition(new TextLine("abcd e"), new TextLine("au29 9q 9"))), 15);
 
   @Test
   public void testRow() throws Exception {
