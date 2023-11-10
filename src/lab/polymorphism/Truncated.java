@@ -1,5 +1,10 @@
 package lab.polymorphism;
 
+/**
+ * A text block where every single row is truncated to a certain max width.
+ *
+ * @author Julian Kim
+ */
 public class Truncated implements TextBlock {
   public TextBlock block;
   public int maxWidth;

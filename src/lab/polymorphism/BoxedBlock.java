@@ -4,6 +4,7 @@ package lab.polymorphism;
  * A text block surrounded by a box.
  *
  * @author Samuel A. Rebelsky
+ * @author Julian Kim
  * @version 1.2 of February 2019
  */
 public class BoxedBlock implements TextBlock {

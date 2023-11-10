@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
  * Utilities for TextBlocks.
  * 
  * @author Samuel A. Rebelsky
+ * @author Julian Kim
  * @version 1.3 of September 2014
  */
 public class TBUtils {

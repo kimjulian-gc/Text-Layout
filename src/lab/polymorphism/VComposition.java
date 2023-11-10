@@ -4,6 +4,7 @@ package lab.polymorphism;
  * The vertical composition of two text blocks.
  * 
  * @author Samuel A. Rebelsky
+ * @author Julian Kim
  * @version 1.2 of February 2019
  */
 public class VComposition implements TextBlock {

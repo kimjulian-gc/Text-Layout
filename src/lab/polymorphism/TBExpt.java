@@ -6,6 +6,7 @@ import java.io.PrintWriter;
  * A series of experiments with the text block layout classes.
  * 
  * @author Samuel A. Rebelsky
+ * @author Julian Kim
  * @version 1.3 of September 2019
  */
 public class TBExpt {

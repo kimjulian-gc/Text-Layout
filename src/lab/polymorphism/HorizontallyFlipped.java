@@ -1,5 +1,10 @@
 package lab.polymorphism;
 
+/**
+ * A text block where every single row is reversed.
+ *
+ * @author Julian Kim
+ */
 public class HorizontallyFlipped implements TextBlock {
   public TextBlock block;
 

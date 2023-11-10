@@ -4,6 +4,7 @@ package lab.polymorphism;
  * One line of text.
  * 
  * @author Samuel A. Rebelsky
+ * @author Julian Kim
  * @version 1.3 of February 2019
  */
 public class TextLine implements TextBlock {

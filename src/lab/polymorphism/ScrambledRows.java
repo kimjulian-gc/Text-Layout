@@ -1,5 +1,10 @@
 package lab.polymorphism;
 
+/**
+ * A text block where every single row is scrambled randomly.
+ *
+ * @author Julian Kim
+ */
 public class ScrambledRows implements TextBlock {
   public TextBlock block;
 

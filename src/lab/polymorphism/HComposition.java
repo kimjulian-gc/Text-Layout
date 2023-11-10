@@ -4,6 +4,7 @@ package lab.polymorphism;
  * The horizontal composition of two text blocks.
  * 
  * @author Samuel A. Rebelsky
+ * @author Julian Kim
  * @version 1.3 of February 2019
  */
 public class HComposition implements TextBlock {

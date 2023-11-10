@@ -1,5 +1,10 @@
 package lab.polymorphism;
 
+/**
+ * A text block where every single row is right justified.
+ *
+ * @author Julian Kim
+ */
 public class RightJustified implements TextBlock {
   public TextBlock block;
   public int width;

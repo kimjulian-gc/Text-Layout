@@ -1,5 +1,10 @@
 package lab.polymorphism;
 
+/**
+ * A text block where every single row is centered.
+ *
+ * @author Julian Kim
+ */
 public class Centered implements TextBlock {
   public TextBlock block;
   public int width;

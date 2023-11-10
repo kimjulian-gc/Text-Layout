@@ -4,6 +4,7 @@ package lab.polymorphism;
  * Simple blocks of text for a lab on polymorphism
  * 
  * @author Samuel A. Rebelsky
+ * @author Julian Kim
  * @version 1.2 of February 2019
  */
 public interface TextBlock {
